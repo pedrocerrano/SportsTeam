@@ -13,8 +13,8 @@ class TeamController {
     
     // CRUD FUNCTIONS
     //MARK: - CREATE
-    func createTeam(teamName: String, playerCount: Int, teamRanking: Int) {
-        let newTeam = Team(name: teamName, playerCount: playerCount, ranking: teamRanking)
+    func createTeam(teamName: String, teamRanking: Int, playerCount: Int) {
+        let newTeam = Team(name: teamName, ranking: teamRanking, playerCount: playerCount)
         teams.append(newTeam)
         
         save()
@@ -22,10 +22,10 @@ class TeamController {
     
     
     //MARK: - UDATE
-    func updateTeam(teamToUpdate: Team, newName: String, newPlayerCount: Int, newRanking: Int) {
+    func updateTeam(teamToUpdate: Team, newName: String, newRanking: Int, newPlayerCount: Int) {
         teamToUpdate.name           = newName
-        teamToUpdate.playerCount    = newPlayerCount
         teamToUpdate.ranking        = newRanking
+        teamToUpdate.playerCount    = newPlayerCount
         
         save()
     } //: func UPDATE

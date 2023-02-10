@@ -10,29 +10,23 @@ import UIKit
 class TeamListTableVC: UITableViewController {
     
     //MARK: - LIFECYCLE
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        tableView.reloadData()
-//    } //: DID LOAD
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    } //: DidLoad
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         tableView.reloadData()
-    } //: willAPPEAR
+    } //: WillAppear
 
     
-    // MARK: - Table view data source
+    // MARK: - TableView Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TeamController.sharedInstance.teams.count
     } //: #ROWS
-
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 65
-    } //: ROW HEIGHT
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,21 +42,20 @@ class TeamListTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            let deleteTeam = TeamController.sharedInstance.teams[indexPath.row]
+            TeamController.sharedInstance.deleteTeam(teamToDelete: deleteTeam)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    } //: EDIT CELL
+        } //: DELETE
+    } //: EDIT STYLE
 
 
-    // MARK: - Navigation
+    // MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toEditTeamDetail" {
+        if segue.identifier == "toTeamDetailVC" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 if let destinationVC = segue.destination as? TeamDetailVC {
-                    let editTeam = TeamController.sharedInstance.teams[indexPath.row]
-                    destinationVC.teamReceiver = editTeam
+                    let teamToSend = TeamController.sharedInstance.teams[indexPath.row]
+                    destinationVC.teamReceiver = teamToSend
                 } //: DESTINATION
             } //: INDEX
         } //: IDENTIFIER

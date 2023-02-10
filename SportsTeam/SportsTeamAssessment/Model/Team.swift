@@ -9,14 +9,14 @@ import Foundation
 
 class Team {
     var name: String
-    var playerCount: Int
     var ranking: Int
+    var playerCount: Int
     let uuid = UUID()
     
-    init(name: String, playerCount: Int, ranking: Int) {
+    init(name: String, ranking: Int, playerCount: Int) {
         self.name = name
-        self.playerCount = playerCount
         self.ranking = ranking
+        self.playerCount = playerCount
     } //: MEMBER-WISE INITIALIZER
 } //: CLASS
 

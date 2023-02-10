@@ -25,44 +25,47 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XCp-U4-iom">
-                                            <rect key="frame" x="20" y="9.3333333333333321" width="294.66666666666669" height="48.666666666666671"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="roo-YV-hLc">
+                                            <rect key="frame" x="22" y="13" width="349" height="39"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(team name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUE-C9-egw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(player count)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llh-da-nc0">
-                                                    <rect key="frame" x="0.0" y="28.333333333333329" width="96" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XCp-U4-iom">
+                                                    <rect key="frame" x="0.0" y="0.0" width="295.33333333333331" height="39"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(team name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUE-C9-egw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="104" height="15.666666666666666"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(player count)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llh-da-nc0">
+                                                            <rect key="frame" x="0.0" y="23.666666666666664" width="96" height="15.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(rank)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhA-mf-xr7">
+                                                    <rect key="frame" x="303.33333333333331" y="0.0" width="45.666666666666686" height="39"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(rank)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhA-mf-xr7">
-                                            <rect key="frame" x="322.66666666666669" y="23.333333333333336" width="50.333333333333314" height="20.333333333333336"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="JhA-mf-xr7" firstAttribute="centerY" secondItem="XCp-U4-iom" secondAttribute="centerY" id="FRB-BA-Iwg"/>
-                                        <constraint firstItem="XCp-U4-iom" firstAttribute="centerY" secondItem="GFU-Ip-TTy" secondAttribute="centerYWithinMargins" constant="1" id="djn-PB-fnt"/>
-                                        <constraint firstItem="XCp-U4-iom" firstAttribute="leading" secondItem="GFU-Ip-TTy" secondAttribute="leadingMargin" id="fKP-19-DFp"/>
-                                        <constraint firstItem="XCp-U4-iom" firstAttribute="width" secondItem="GFU-Ip-TTy" secondAttribute="width" multiplier="0.75" id="fM7-at-ca4"/>
-                                        <constraint firstAttribute="trailing" secondItem="JhA-mf-xr7" secondAttribute="trailing" constant="20" id="nP3-HK-ViQ"/>
-                                        <constraint firstItem="JhA-mf-xr7" firstAttribute="leading" secondItem="XCp-U4-iom" secondAttribute="trailing" constant="8" id="rT6-1r-8dn"/>
+                                        <constraint firstItem="roo-YV-hLc" firstAttribute="top" secondItem="GFU-Ip-TTy" secondAttribute="topMargin" constant="2" id="Chs-k0-h2H"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="roo-YV-hLc" secondAttribute="bottom" constant="2" id="G2g-28-vS3"/>
+                                        <constraint firstItem="roo-YV-hLc" firstAttribute="leading" secondItem="GFU-Ip-TTy" secondAttribute="leadingMargin" constant="2" id="KTm-Qp-l5z"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="roo-YV-hLc" secondAttribute="trailing" constant="2" id="p3v-GJ-mfQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="playerCountLabel" destination="llh-da-nc0" id="eai-Wl-3yL"/>
                                     <outlet property="teamNameLabel" destination="kUE-C9-egw" id="k3z-se-yWr"/>
                                     <outlet property="teamRankLabel" destination="JhA-mf-xr7" id="Jbn-SF-s6h"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toEditTeamDetail" id="yQb-hY-ex8"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toTeamDetailVC" id="yQb-hY-ex8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -129,18 +132,32 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22e-bP-SQL">
                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="44"/>
-                                        <color key="tintColor" systemColor="systemGray2Color"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Clear"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lf5-iH-QYj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nn-gj-ASN">
                                         <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="44"/>
-                                        <color key="tintColor" systemColor="systemRedColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Delete"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Delete"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="deleteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G21-cB-hyN"/>
                                         </connections>
@@ -184,6 +201,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="clearButton" destination="22e-bP-SQL" id="bYL-Nt-G35"/>
+                        <outlet property="deleteButton" destination="4nn-gj-ASN" id="FqJ-u1-IAi"/>
                         <outlet property="playerCountTextField" destination="7gG-qE-iln" id="b75-bI-ejt"/>
                         <outlet property="teamNameTextField" destination="HW0-vw-C4g" id="54i-qT-Lco"/>
                         <outlet property="teamRankingTextField" destination="XPg-46-ms1" id="brz-vU-3Rd"/>
@@ -219,8 +238,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
